@@ -1,5 +1,6 @@
 # Syntax Definition
 
+```
 Pattern     := { Step }
 Step        := Number ":" [Rope] Action { ";" Action }
 Rope        := Letter ["." Length] // needed only for the first use of the rope
@@ -9,7 +10,7 @@ Travel      := -> Dest
 Dest        := BodyPart [ "." Surface ]
 Note        := "t:" Tension | "!nerve" | "!pulse" | "↔ mirror" | "[ ... ]" | "( ... ) xN"
 
-BodyPart    := [code](#Body_Parts) [ "." Side [ "." Surface ] ]
+BodyPart    := [code](#body-parts) [ "." Side [ "." Surface ] ]
 Side        := "L" | "R" | "B"      // both = symmetrical intent
 Surface     := "V" | "D"
 
@@ -21,7 +22,8 @@ Angle       := "@" Clock
 Clock       := "12"|"1"|"1:30"|...|"11:30"|"6"
 Tension     := "soft"|"firm"|"tight"
 Number      := integer
-Manipulation := 
+Manipulation :=
+```
 
 ## Body Parts
 
