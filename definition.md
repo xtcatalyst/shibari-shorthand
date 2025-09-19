@@ -1,119 +1,54 @@
-# Syntax Definition
+# Shibari Notation v0.4
 
+## Core Syntax
 ```
-Pattern     := { Step }
-Step        := Number ":" [Rope] Action { ";" Action }
-Rope        := Letter ["." Length] // needed only for the first use of the rope
-Action      := Bind | Travel | Note
-Bind        := BodyPart ":" Tie [Wraps] [WrapDir] [CinchOrFriction] [Angle] [Tension]
-Travel      := -> Dest
-Dest        := BodyPart [ "." Surface ]
-Note        := "t:" Tension | "!nerve" | "!pulse" | "↔ mirror" | "[ ... ]" | "( ... ) xN"
+Rope           := RopeId ["." Length [UnitCode]]
+Action         := Bind | FrictionFix | Travel | Manipulation | Note | TensionNote
+Bind           := Target ":" TieSpec [Wraps]  [ExitAngle] [TensionNote]
 
-BodyPart    := Part [ "." Side [ "." Surface ] ]
-Side        := "L" | "R" | "B"      // both = symmetrical intent
-Surface     := "V" | "D"
+FrictionFix    := Target ":" FrictionCode [ExitAngle] [TensionNote]
+TieSpec        := TieCode [ "." DirectionCode ]          
+Target         := PartCode [ "." SideCode ] [ "." SurfaceCode ] 
+Wraps          := "x" NUMBER
+WrapDirCode    := "cw" | "ccw"
+ExitAngle      := "@" ClockAngle              // attaches to the immediately preceding Bind/FrictionFix
+TensionNote    := "t:" TensionLevel
+Travel         := "->" ( Target | SurfaceCode )
 
-Tie          := "SC" | "DC" | "RB" | "HL" | "AL" | "CP"
-Wraps       := "x" Number           // e.g., x2
-WrapDir     := "cw" | "ccw"
-CinchOrFriction := "CP" | "HH" | "XF" | "LK" | "SQ" | "MTR"
-Angle       := "@" Clock
-Clock       := "12"|"1"|"1:30"|...|"11:30"|"6"
-Tension     := "soft"|"firm"|"tight"
-Number      := integer
-Manipulation :=
+Manipulation   := "+" Target "/" Target       // bring/hold two targets together
+
+Note           := FlagCode | MirrorKeyword | BracketNote | TypedNote
+BracketNote    := "[" FreeText "]"            // e.g., [sternal gap], [below shoulder blades]
+TypedNote      := "(" NoteItem { "|" NoteItem } ")"
+NoteItem       := "nerve" | "pulse" | ("avoid:" Label) | ("pos:" Label)
 ```
 
-## Body Parts
+## PartCode
 
-`BodyPart    := Part [ "." Side [ "." Surface ] ]`
+`WR wrist | AN ankle | FA forearm | UA upper arm | EL elbow | CHU upper chest | CHL lower chest | WA waist | HP hip | TH thigh | KN knee | CF calf | NK neck | RB ribcage |  SH shoulder`
 
-### Examples
+## Cinch or Friction
 
-* `WR.L` Left wrist
-* `CHU.D` Upper chest - back
+`CP cinch pass | HH half-hitch | XF X-friction | LHF lark’s head friction | SQ (square knot) | RF (reverse friction) |  MH munter hitch | MHR reverse munter hitch | CH Cow Hitch | LF L-Friction | 360L 360 Loop | LO lock off`
 
-### Part
+## TieCode 
 
-```
-WR wrist
-AN ankle
-FA forearm
-UA upper arm
-EL elbow
-CHU Upper Chest
-CHL Lower Chest 
-WA waist
-HP hip
-TH thigh
-KN knee
-CF calf
-NK neck
-RB ribcage
-```
-### Side
+`SC single column | DC double column | RB rope band | HL half-lashing | LHA anchor lark’s head), HC (Hojo cuff)`
 
-```
-L Left
-R Right
-```
+## UnitCode
 
-### Surface
+`ft | m | cm`
 
-```
-V Ventral (Front)
-D Dorsal (Back)
-```
+FlagCode 
 
-## Ties
+`!nerve | !pulse | <> mirror`
 
-```
-SC single-column 
-DC double-column 
-RB rope band (simple band without a column lock)
-CP cinch pass (perpendicular cinch through wraps)
-AL anchor lark’s head (attach to an anchor/bight)
-HL half-lashing (two bands + cinch)
-```
+SurfaceCode
 
-## Friction/Locks
+`L left | R right | CR cranial | CD caudal | MD medial | LT lateral | V ventral | D dorsal`
 
-```
-RF Reverse Friction
-HH half-hitch,
-XF X-friction,
-LK lark’s head,
-SQ square knot,
-MF munter-style friction.
-```
+SideCode (Bottom/Model)
 
-## Direction of tie
+`L left | R right | B both (symmetric intent)`
 
-While staying on body part
-
-```
-->CR cranial (toward head), 
-->CD caudal (toward feet),
-->L left (of rigger)
-->R right (of rigger)
-->MD medial (towards the center)
-->LT lateral (towards the outside)
-```
-
-Moving to body part
-```
-->FA to forearm
-```
-
-## Angle
-
-Typically the angle of the rope leaving the previous tie or preparing for next.  Typically equivalenent to direction of tie
-
-```
-@12 (->CR) toward head
-@6 (->CD) toward feet
-@3 (->R) to the right
-@9 (->L) to the left
-``` 
 
