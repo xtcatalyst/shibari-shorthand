@@ -11,11 +11,6 @@ A CHU.D.M: RB.CD t:firm ; -> UA.R ; -> CHU.V ; -> UA.L ; -> CHU.D.M ; CHU.D.M: H
 
 ## Tie-along narration 
 
-### Setup & posture
-
-Partner stands or sits upright with arms relaxed at their sides.
-You’ll create light elbow flexion later when you “+FA/UA” (bringing forearm and upper arm together).
-
 1) Right wrist single-column; route to back, then to the left forearm (ventral)
 
 Find the right wrist (WR.R). Using Rope A’s ~4″ bight, tie a single-column (SC) around the wrist. Dress and snug so it’s secure yet comfortable—room for a fingertip, no twisting.
