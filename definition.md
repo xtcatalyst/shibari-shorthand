@@ -25,7 +25,7 @@ NoteItem       := "nerve" | "pulse" | ("avoid:" Label) | ("pos:" Label)
 
 ## PartCode
 
-`WR wrist | AN ankle | FA forearm | UA upper arm | EL elbow | CHU upper chest | CHL lower chest | WA waist | HP hip | TH thigh | KN knee | CF calf | NK neck | RB ribcage |  SH shoulder`
+`WR wrist | AN ankle | FA forearm | UA upper arm | EL elbow | CHU upper chest | CHL lower chest | WA waist | HP hip | TH thigh | KN knee | CF calf | NK neck | RB ribcage |  SH shoulder | BU back up | BL back lower`
 
 ## Cinch or Friction
 
