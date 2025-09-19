@@ -1,18 +1,42 @@
-# shibari-shorthand
-Experiments in Shorthand for Shibari Ties
+# shibari-shorthand 
 
-This repo is an exploration in using shorthand notation for Shibari.  Here is the evolving [Definition](./definition.md) and here are some [Examples](./examples)
+Experiments in Shorthand for Shibari Ties by @XTCatalyst on FetLife.
+
+This repo is an exploration in using shorthand notation for Shibari.  Here is the evolving [Definition](./definition.md) and here are some [Examples](./examples).  Most of us have watched a video, or been at a class, and the presenter goes to fast as we madly write things down.  WOuldn't it 
 
 The shorthand was inspired by knitting/crochet shorthand.  It was kickstarted with chatgpt.
 
+## Rope can be dangerous
 
+Rope can damage your body, do classes, get training, practice safely.  Don't tie outside your skill level unless with a teacher.
 
-# What does it look like?
+## Why don't you have descriptions of what the knots or ties are?  
 
-## Upper chest band (front, high on the chest)
+This is first and foremost an expirment in capturing ties.   It's optimized for my note taking.  You can tweak it yourself.
+
+## What does it look like?
+
+### Upper chest band (front, high on the chest)
 
 ```
 A CHU.V: RB x2 cw ; CP (sternal gap) ; XF @3 t:firm !nerve
 ```
 
-Which roughly translates to Rope A `A` is tying Upper Chest Ventral (front) `CHU.V:` with two simple Rope Bands in a clockwise direction `RB x2 cw`  followed by `;`  with a cinch pass at the sternal gap `CP (sternal gap)`, followed by `:` a X-friction `XF` exiting at in the 3 oclock direction `@3`.  Tension should be firm `t:firm` and watch for nerve safe placement `!nerve`.
+## Converting to tie along
+
+We live in the time of emrging LLMs.  Try this prompt
+
+----
+I am using a Shibari Shorthand Notation here is it's defintion
+
+<paste defintion.md>
+
+I'd like you to convert the following ties into a tie-along narrated form. 
+
+<paste tie>
+---
+
+See [examples](./examples) for the output of this prompt.
+
+
+
