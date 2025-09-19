@@ -13,9 +13,9 @@ A CHU.D.M: RB.CD t:firm ; -> UA.R ; -> CHU.V ; -> UA.L ; -> CHU.D.M ; CHU.D.M: H
 
 1) Right wrist single-column; route to back, then to the left forearm (ventral)
 
-Find the right wrist (WR.R). Using Rope A’s ~4″ bight, tie a single-column (SC) around the wrist. Dress and snug so it’s secure yet comfortable—room for a fingertip, no twisting.
+Take the right wrist (WR.R). Using Rope A’s ~4″ bight, tie a single-column (SC) around the wrist. 
 Bring/hold the right forearm with the right upper arm (+FA.R/UA.R)—i.e., gently encourage a natural bend so the cuff won’t migrate.
-Travel (->) with the working end to the upper chest, dorsal (CHU.D), landing below the shoulder blades. Lay the rope flat; this spot will become a routing hub.
+Travel with the working end to the upper backupper chest, dorsal (CHU.D), landing below the shoulder blades. Lay the rope flat; this spot will become a routing hub.
 Continue travel to the left forearm, ventral (FA.L.V)—i.e., around to the front/inside of the left forearm readying for the left side work.
 
 2) Left wrist hojo cuff; chest reverse friction; anchor via half-hitch
