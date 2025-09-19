@@ -26,7 +26,7 @@ A CHU.V: RB x2 cw ; CP (sternal gap) ; XF @3 t:firm !nerve
 
 We live in the time of emrging LLMs.  Try this prompt
 
-----
+```
 I am using a Shibari Shorthand Notation here is it's defintion
 
 <paste defintion.md>
@@ -34,7 +34,7 @@ I am using a Shibari Shorthand Notation here is it's defintion
 I'd like you to convert the following ties into a tie-along narrated form. 
 
 <paste tie>
----
+```
 
 See [examples](./examples) for the output of this prompt.
 
