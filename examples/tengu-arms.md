@@ -3,10 +3,10 @@
 # In shorthand Notation
 
 ```
-A WR.R: SC [4" bight] ; +FA.R/UA.R ; -> CHU.D [below shoulder blades] ; -> FA.L.V 
-A +FA.L/UA.L; WR.L: HC ; -> CHU.D ; CHU.D: RF ; -> FA.R ; -> CHU.D.M ; CHU.D.M: HH
-A CHU.D.M: RB t:firm ; -> UA.L ; -> CHU.V [sternal gap] ; -> UA.R ; -> CHU.D.M ; CHU.D.M: RF
-A CHU.D.M: RB.CD t:firm ; -> UA.R ; -> CHU.V ; -> UA.L ; -> CHU.D.M ; CHU.D.M: HH @7:30
+A WR.R: SC [4" bight] ; +FA.R/UA.R ; -> BU [below shoulder blades] ; -> UA.L.V
+A +FA.L/UA.L; WR.L: HC ; -> BU ; -> BU.R: RF ; -> BU.M: HH
+A BU.M: RB t:firm ; -> UA.L ; -> CHU.V [sternal gap] ; -> UA.R ; -> BU.M ; BU.D.M: RF
+A BU.M: RB.CD t:firm ; -> UA.R ; -> CHU.V ; -> UA.L ; -> DU.M ; DU.M: HH @7:30
 ```
 
 ## Tie-along narration 
