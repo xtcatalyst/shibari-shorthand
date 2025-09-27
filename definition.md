@@ -1,4 +1,4 @@
-# Shibari Notation v0.4
+# Shibari Notation v0.5
 
 ## Core Syntax
 ```
@@ -25,16 +25,16 @@ NoteItem       := "nerve" | "pulse" | ("avoid:" Label) | ("pos:" Label)
 
 ## PartCode
 `WR wrist | EL elbow | FA forearm UA upper arm | SH shoulder` 
-`CHU upper chest | CHL lower chest BU upper back | BL Lower Back | WA waist | HP hip`
-`AN ankle | CF calf | KN knee | TH thigh`
+`CHU upper chest | CHL lower chest | UB Under Bust| BU upper back | BL Lower Back | WA waist | HP hip`
+`AN ankle | CF calf | KN knee | TH thigh | GR Groin`
 
 ## Cinch or Friction
 
-`CP cinch pass | HH half-hitch | XF X-friction | SQ square knot | RF reverse friction |  MH munter hitch | MHR reverse munter hitch | CH Cow Hitch | LF L-Friction | 360L 360 Loop | LO lock off`
+`CP cinch pass | HH half-hitch | XF x-friction | SQ square knot | RF reverse friction |  MH munter hitch | MHR reverse munter hitch | CH cow hitch | LF l-friction | 360L 360 loop | LO lock off | OL open loop | UK ucki knot`
 
 ## TieCode 
 
-`SC single column | DC double column | RB rope band | HL half-lashing | HC hojo cuff | LH lark’s head as anchor`
+`SC single column | DC double column | RB rope band | HL half-lashing | HC hojo cuff | LH lark’s head as anchor `
 
 ## UnitCode
 
