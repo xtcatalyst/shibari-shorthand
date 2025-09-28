@@ -30,7 +30,7 @@ NoteItem       := "nerve" | "pulse" | ("avoid:" Label) | ("pos:" Label)
 
 ## Cinch or Friction
 
-`CP cinch pass | HH half-hitch | XF x-friction | SQ square knot | RF reverse friction |  MH munter hitch | MHR reverse munter hitch | CH cow hitch | LF l-friction | 360L 360 loop | LO lock off | OL open loop | UK ucki knot`
+`CP cinch pass | HH half-hitch | XF x-friction | SQ square knot | RF reverse friction |  MH munter hitch | MHR reverse munter hitch | CH cow hitch | LF l-friction | 360L 360 loop | LO lock off | OL open loop | UK ukki knot | TD tear drop`
 
 ## TieCode 
 
