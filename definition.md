@@ -1,26 +1,26 @@
-# Shibari Notation v0.5
+# Shibari Shorthand Notation v0.7
 
 ## Core Syntax
 ```
-Rope           := RopeId ["." Length [UnitCode]]
-Action         := Bind | FrictionFix | Travel | Manipulation | Note | TensionNote
-Bind           := Target ":" TieSpec [Wraps]  [ExitAngle] [TensionNote]
 
-FrictionFix    := Target ":" FrictionCode [ExitAngle] [TensionNote] [ "." SurfaceCode | SideCode ] [ BracketNote ]
-TieSpec        := TieCode [ "." DirectionCode ]          
-Target         := PartCode  [ "." SurfaceCode | SideCode ] 
-Wraps          := "x" NUMBER
-WrapDirCode    := "cw" | "ccw"
-ExitAngle      := "@" ClockAngle              // attaches to the immediately preceding Bind/FrictionFix
-TensionNote    := "t:" TensionLevel
-Travel         := "->" ( Target | SurfaceCode ) [ BracketNote ]
+Rope            := RopeId ["." Length [UnitCode]]
+Action          := Operation | Travel | Manipulation | Note | TensionNote
 
-Manipulation   := "+" Target "/" Target       // bring/hold two targets together
+Operation       := Target ":" TechniqueList [Wraps] [ExitAngle] [TensionNote]
+TechniqueList   := Technique { "|" Technique }
+Technique       := (FrictionCode | TieCode) [ "." SurfaceCode | "." SideCode ] [Note]
 
-Note           := FlagCode | MirrorKeyword | BracketNote | TypedNote
-BracketNote    := "[" FreeText "]"            // e.g., [sternal gap], [below shoulder blades]
-TypedNote      := "(" NoteItem { "|" NoteItem } ")"
-NoteItem       := "nerve" | "pulse" | ("avoid:" Label) | ("pos:" Label)
+Target          := PartCode [ "." SurfaceCode ] [ "." SideCode ]
+Wraps           := "x" NUMBER [WrapDirCode]
+ExitAngle       := "@" ClockAngle
+TensionNote     := "t:" TensionLevel
+
+Travel          := "->" ( Target | SurfaceCode  | Operation ) [Note]
+Manipulation    := "+" Target "/" Target
+
+Note            := "(" NoteBody ")"
+NoteBody        := FreeText | NoteItem { "|" NoteItem }
+NoteItem        := "nerve" | "pulse" | ("avoid:" Label) | ("pos:" Label)
 ```
 
 ## PartCode
@@ -28,7 +28,7 @@ NoteItem       := "nerve" | "pulse" | ("avoid:" Label) | ("pos:" Label)
 `CHU upper chest | CHL lower chest | UB Under Bust| BU upper back | BL Lower Back | WA waist | HP hip`
 `AN ankle | CF calf | KN knee | TH thigh | GR Groin`
 
-## Cinch or Friction
+## FrictionCode
 
 `CP cinch pass | HH half-hitch | XF x-friction | SQ square knot | RF reverse friction |  MH munter hitch | MHR reverse munter hitch | CH cow hitch | LF l-friction | 360L 360 loop | LO lock off | OL open loop | UK ukki knot | TD tear drop`
 
