@@ -6,14 +6,14 @@ Rope           := RopeId ["." Length [UnitCode]]
 Action         := Bind | FrictionFix | Travel | Manipulation | Note | TensionNote
 Bind           := Target ":" TieSpec [Wraps]  [ExitAngle] [TensionNote]
 
-FrictionFix    := Target ":" FrictionCode [ExitAngle] [TensionNote]
+FrictionFix    := Target ":" FrictionCode [ExitAngle] [TensionNote] [ "." SurfaceCode | SideCode ] [ BracketNote ]
 TieSpec        := TieCode [ "." DirectionCode ]          
-Target         := PartCode [ "." SideCode ] [ "." SurfaceCode ] 
+Target         := PartCode  [ "." SurfaceCode | SideCode ] 
 Wraps          := "x" NUMBER
 WrapDirCode    := "cw" | "ccw"
 ExitAngle      := "@" ClockAngle              // attaches to the immediately preceding Bind/FrictionFix
 TensionNote    := "t:" TensionLevel
-Travel         := "->" ( Target | SurfaceCode )
+Travel         := "->" ( Target | SurfaceCode ) [ BracketNote ]
 
 Manipulation   := "+" Target "/" Target       // bring/hold two targets together
 
